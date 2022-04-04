@@ -1,0 +1,26 @@
+{
+  "congratulations": {
+    "title": "Congratulations!",
+    "description": "<p>Looks like you have managed to complete every problem that exists so far! Make sure to check back in a while to see if new challenges have been added :)</p>"
+  },
+  "failure": {
+    "title": "Wrong :(",
+    "description": "<p>Unfortunately that was not the correct answer! Click <a href=\"/{{index}}\">here</a> to go back to the problem.</p>"
+  },
+  "invalid": {
+    "title": "Oops!",
+    "description": "<p>Looks like the problem index you entered is not valid!</p>"
+  },
+  "success": {
+    "title": "Great work!",
+    "description": "<p>You managed to figure out the correct answer! Click <a href=\"/{{index}}\">here</a> to go to the next problem.</p>"
+  },
+  "welcome": {
+    "title": "Welcome to Programmer Quest!",
+    "description": "<p>Hello there! Glad to see that you stumbled across Programmer Quest :) This website contains a series of programming challenges centered around a fictional MMORPG. Throughout the challenges you will journey through this MMORPG, while hopefully learning a thing or two along the way. Enjoy!</p><p>To get started, click <a href=\"/0\">here</a></p><small>(or you can go to the <a href=\"/all\">list</a> of all problems)</small>"
+  },
+  "all": {
+    "title": "List of problems",
+    "description": "{{#problems}}<p><a href=\"/{{index}}\">{{index}}. {{title}}</a></p>{{/problems}}"
+  }
+}

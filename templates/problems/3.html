@@ -1,0 +1,54 @@
+<p>
+  Just as you figure out what the loading screen tip says, the progress bar hits 100% and you are thrown into the game!
+</p>
+
+<p>
+  The starting zone seems to be typical grassland, with a few trees here and there and a few scattered houses.
+  You can see a few other players running around, probably trying to complete some quest. A few meters in
+  front of you is a conveniently placed NPC with a big exclamation mark above his head, which you correctly
+  guess means that he has a quest for you. Your first quest!
+</p>
+
+<p>
+  You talk to the NPC, who turns out to be a farmer, aptly named Willem Farmer. He tells you that he has
+  a problem with the rapidly increasing <b>wild boar</b> population destroying his crop. He then asks you kindly
+  to travel to the nearby forest and hunt boars, for which you will be rewarded a few coins for
+  your trouble.
+</p>
+
+<p>
+  You make your way to the forest, and start hunting the boars. They are spawning pretty slowly, but after a
+  while you realize a pattern: It seems like the boars have a fixed set of spawn points, and every such point
+  has a fixed interval between spawning a new boar. For example, given the following spawn
+  point (format '<b>x,y: interval</b>'):
+</p>
+
+<pre>
+<code>
+5,3: 5      (sp1)
+-2,0: 3     (sp2)
+4,4: 7      (sp3)
+</code>
+</pre>
+
+<p>
+  The fastest way to slay five boars would be sp2 -> sp1 -> sp2 -> sp3 -> sp2, and would mean that you have to
+  travel a total of 26,14 coordinates in <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">Manhattan distance</a>,
+  assuming you start at the spawn point with the lowest interval.
+</p>
+
+<p>
+  So, given the following points:
+</p>
+
+<ul>
+  <li>You start at the spawn point with the lowest interval</li>
+  <li>You start at time '0'</li>
+  <li>It costs <b>no</b> time to move between spawn points</li>
+  <li>It costs <b>no</b> time to slay a boar</li>
+</ul>
+
+<p>
+  How far would you have to travel to slay 1000 boars as fast as possible using
+  the spawn points in the input file? (Enter your answer in the format 'x,y' without quotation marks).
+</p>

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Character creation",
+    "answer": "1401",
+    "input": true
+  },
+  {
+    "title": "Naming rules",
+    "answer": "360",
+    "input": true
+  },
+  {
+    "title": "Loading screen tip",
+    "answer": "welcome to programmer quest",
+    "input": false
+  },
+  {
+    "title": "Boar hunting",
+    "answer": "13012,15172",
+    "input": true
+  },
+  {
+    "title": "Shopping spree",
+    "answer": "29049293647195162",
+    "input": false
+  },
+  {
+    "title": "Fishing mini-game!",
+    "answer": "eel,killerfish",
+    "input": true
+  }
+]

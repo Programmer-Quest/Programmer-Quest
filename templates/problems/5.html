@@ -1,0 +1,52 @@
+<p>
+  After having spent all your money in the shop, you can not wait to try out the fishing rod!
+  You wander around for a while looking for a big enough body of water to fish from, and settle
+  for a small lake with a little jetty. The lake is close to Willem, so you will hopefully
+  see when he respawns so you can turn in your boar hunting quest.
+</p>
+
+<p>
+  After fishing for a while you start to notice a pattern. It seems like the next type of fish you
+  catch is dependent on the previous two fishes you caught. So if the last fish you caught was
+  a <b>herring</b>, and the fish you caught before that was an <b>eel</b>, then the next fish seems to always
+  be a <b>clownfish</b>! Sure enough, when you take a look at the in-game manual about fishing, this is what it says:
+</p>
+
+<blockquote>
+  Fishing is made up of a set of rules on the form <b>A,B -> C</b>, where:
+  <ul>
+    <li>'A' is the name of the second to last fish caught</li>
+    <li>'B' is the name of the last fish caught</li>
+    <li>'C' is the name of the fish you are guaranteed to get next</li>
+  </ul>
+
+  There is one unique pair of starting fish that will lead to a sequence that includes all available types of fish.
+  The starting pair is <b>not</b> counted as part of the sequence.
+</blockquote>
+
+<p>So, for example if there were two different kinds of fish, <b>A</b> and <b>B</b>, with the following four rules:</p>
+<pre>
+<code>
+A,A -> A (rule 1)
+A,B -> B (rule 2)
+B,A -> A (rule 3)
+B,B -> A (rule 4)
+</code>
+</pre>
+
+<p>We get the following sequences:</p>
+<pre>
+<code>
+A,A --rule 1--> A,A
+A,B --rule 2--> B,B --rule 4--> B,A --rule 3--> A,A --rule 1--> A,A
+B,A --rule 3--> A,A --rule 1--> A,A
+B,B --rule 4--> B,A --rule 3--> A,A --rule 1--> A,A
+</code>
+</pre>
+
+<p>
+  In this example, only the starting pair 'A,B' leads to a sequence where you are able to catch both types of fish,
+  since none of the other starting sequences ever gives B. Using the fishing rules in the game (the input file), which is the only
+  starting pair that leads to a sequence containing all the different kinds of fish? (answer on the form 'A,B' without
+  quotation marks).
+</p>
