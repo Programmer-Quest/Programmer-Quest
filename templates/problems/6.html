@@ -1,0 +1,35 @@
+<p>
+  You fish for so long that you start to lose track of time. The bobber quietly rises and falls with the gentle waves.
+  Your concentration is only shaken by the occasional sound of some fish disturbing the water surface.
+  But you are thrown out of your trance-like state when you notice that every time you catch a
+  fish a red warning message pops up in the chat, stating:
+</p>
+
+<blockquote>
+  <b>Warning: Inventory full</b>
+</blockquote>
+
+<p>
+  Oh no! You caught too many fish, and now you do not have enough inventory space to carry
+  them all. Lucky for you, the inventory can be upgraded to increase the amount of items it can
+  carry.
+</p>
+
+<p>
+  The inventory upgrades follow the <a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci sequence</a>,
+  i.e. the next upgrade would increase the inventory space by as much as the previous two upgrades together.
+  So the first and second upgrade would increase the inventory size by 1, the third would increase the size by 2,
+  the fourth by 3, and so on. If the inventory has space for 20 items to start with, you would need to acquire
+  <b>7 upgrades</b> to be able to hold 50 items:
+</p>
+
+<pre>
+  <code>
+    20 + 1 + 1 + 2 + 3 + 5 + 8 + 13 = 53
+  </code>
+</pre>
+
+<p>
+  Given the above rules for how the inventory upgrade system works (and with an <b>initial inventory size of 20</b>),
+  how many upgrade would you need to be able to store all the <b>10<sup>18</sup> fish</b> you have caught so far?
+</p>

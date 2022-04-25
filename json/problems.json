@@ -28,5 +28,10 @@
     "title": "Fishing mini-game!",
     "answer": "eel,killerfish",
     "input": true
+  },
+  {
+    "title": "Inventory Upgrades",
+    "answer": "86",
+    "input": false
   }
 ]
