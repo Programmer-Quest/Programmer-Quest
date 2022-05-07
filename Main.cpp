@@ -1,4 +1,5 @@
 #include <iostream>
+#include <span>
 
 #include "crow.h"
 
@@ -16,10 +17,25 @@ static auto loadSimplePage(const crow::json::rvalue& pages, const std::string& p
   return crow::mustache::load("simple_page.html").render(ctx);
 }
 
-int main() {
+static std::optional<std::string> getArgument(std::span<char*> argv, const std::string& name) {
+  auto found = std::find(argv.begin(), argv.end(), name);
+  if (found == argv.end() || ++found == argv.end())
+    return std::nullopt;
+
+  return std::optional(*found);
+}
+
+int main(int argc, char** argv) {
   auto problems = readJsonFile("json/problems.json");
   auto variables = readJsonFile("json/variables.json");
   auto pages = readJsonFile("json/pages.json");
+
+  auto cert = getArgument(std::span(argv, argc), "--certificate");
+  auto key = getArgument(std::span(argv, argc), "--key");
+  if ((cert && !key) || (!cert && key)) {
+    std::cout << "Error: You have to specify both certificate and key" << '\n';
+    return 0;
+  }
 
   crow::SimpleApp app;
 
@@ -82,7 +98,10 @@ int main() {
     return loadSimplePage(pages, "all", ctx);
   });
 
-  app.multithreaded().port(18081).run();
+  app.multithreaded().port(18081);
+  if (cert && key)
+    app.ssl_file(*cert, *key);
+  app.run();
 
   return 0;
 }
