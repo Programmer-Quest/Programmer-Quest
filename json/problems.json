@@ -30,8 +30,13 @@
     "input": true
   },
   {
-    "title": "Inventory Upgrades",
+    "title": "Inventory upgrades",
     "answer": "86",
     "input": false
+  },
+  {
+    "title": "Quest reward",
+    "answer": "995",
+    "input": true
   }
 ]
