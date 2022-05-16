@@ -38,5 +38,10 @@
     "title": "Quest reward",
     "answer": "995",
     "input": true
-  }
+  },
+  {
+    "title": "Talent graph",
+    "answer": "265",
+    "input": true
+  } 
 ]
