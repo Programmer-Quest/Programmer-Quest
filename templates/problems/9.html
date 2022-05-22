@@ -1,0 +1,32 @@
+<p>
+  After spending your talent points in the most optimal way possible, you see that {{first_npc}}
+  has a new quest available for you. You talk to him, and it turns out that boars are not the only type
+  of wild animal causing trouble. A big bear has been wreaking havoc in the area, eating all the local bees'
+  honey, causing the bees to starve in the winter. You have to stop this monster!
+</p>
+
+<p>
+  {{first_npc}} gives you <b>a single bear trap</b>, and you begin to make your way to the forest once more.
+  While walking, you do a little research on this fearsome bear. You find out that the bear has a very
+  simple pathfinding algorithm. It picks a random line segment from a given list, then it spawns at the
+  start of this line segment, walks to the end, and then despawns from the world for a while, until it picks a new
+  random segment.
+</p>
+
+<p>
+  These segments are always either horizontal, vertical, or diagonal. Every line segment is defined by a start point
+  and an end point, both on the form (x,y). Below is an example of such a list of line segments:
+</p>
+
+<pre>
+  (1,0),(6,5)
+  (0,3),(6,3)
+  (4,4),(4,-1)
+  (3,1),(0,4)
+</pre>
+
+<p>
+  To maximize the chance of the bear walking in your trap, it would be best to place it at the <b>point (3,4)</b>, since three
+  of the four segments cross that point. Given the line segments in the input file, where would it be best to place the
+  bear trap? (Enter your answer in the format 'x,y' without quotation marks).
+</p>

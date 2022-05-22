@@ -43,5 +43,10 @@
     "title": "Talent graph",
     "answer": "265",
     "input": true
+  },
+  {
+    "title": "Bear trap",
+    "answer": "-22,-34",
+    "input": true
   } 
 ]
