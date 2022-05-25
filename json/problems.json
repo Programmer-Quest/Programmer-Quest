@@ -48,5 +48,10 @@
     "title": "Bear trap",
     "answer": "-22,-34",
     "input": true
+  },
+  {
+    "title": "Bear escape",
+    "answer": "8529",
+    "input": true
   } 
 ]
