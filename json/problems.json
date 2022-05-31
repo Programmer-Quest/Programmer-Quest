@@ -53,5 +53,10 @@
     "title": "Bear escape",
     "answer": "8529",
     "input": true
+  },
+  {
+    "title": "Loading screen tip 2",
+    "answer": "the bear is too powerful to be incapacitated by a single trap",
+    "input": false
   } 
 ]
