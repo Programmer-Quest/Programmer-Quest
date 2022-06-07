@@ -58,5 +58,10 @@
     "title": "Loading screen tip 2",
     "answer": "the bear is too powerful to be incapacitated by a single trap",
     "input": false
+  },
+  {
+    "title": "Test of skill",
+    "answer": "aobgchdferflgahmicjqkdlbmpntonpuqvrssitkujve",
+    "input": true
   } 
 ]

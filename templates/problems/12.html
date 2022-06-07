@@ -1,0 +1,79 @@
+<p>
+  After cracking the cipher and entering the game, you return to {{first_npc}}
+  to turn in the bear hunting quest. He seems very happy:
+</p>
+
+<blockquote>
+  Impressive! Most people I send to deal with the bear never return, but you seem to have a knack for
+  these sorts of things. The local militia could surely use someone with your skills to keep the region safe
+  from monsters and bandits. You should head to their base of operations and talk to their recruiter!
+</blockquote>
+
+<p>
+  You get some experience points and coins as quest reward, and {{first_npc}} gives you a new quest to
+  travel to the local militia's base and talk to their recruiter, <b>{{militia_recruiter}}</b>.
+  You quickly make your way there, and when you arrive you notice another player, <b>{{militia_player}}</b>
+  partaking in what seems to be some kind of fight against an NPC. You ignore the fight and instead 
+  walk up to the recruiter, ready to turn in your quest, when you realize you cannot! First you have
+  to complete a hand-to-hand fight against an NPC to make sure that you are suitable to join the militia.
+</p>
+
+<p>
+  The fight is made up of a number of rounds, and every round you have to choose a counterattack based
+  on the attack the NPC is currently performing. Every attack has exactly one optimal counterattack,
+  and every counterattack is optimal against exactly one attack. Below is an example of a short
+  fight, where every line is one round, in the format '<b>&ltattack&gt &ltcounter&gt</b>':
+</p>
+
+<pre>
+  <code>
+    a c
+    c c
+    b a
+    c a
+    c a
+    a b
+  </code>
+</pre>
+
+<p>
+  Assuming that the player is acting rationally, the optional counterattacks can be identified via a process of elimination.
+  We can deduce that the optimal counter to <i>c</i> is <i>a</i>, since there are two identical lines 'c a', meaning that the player found the optimal counter and kept
+  using it. We also know that <i>c</i> is not the optimal counter to <i>a</i>, since the player tried something else
+  in a later round when <i>a</i> appeared again (they tried <i>b</i>). Therefore the optimal counter to <i>a</i> must be <i>b</i>.
+  Lastly, this means that <i>c</i> must be the optimal counter to <i>b</i>, since there is no other option left.
+</p>
+
+<p>
+  To make sure that you pass the test, you analyze the fight that <b>{{militia_player}}</b> partook in earlier (specified in the input file).
+  The answer is constructed by concatenating every attack together with its optimal counter, going through the attacks in alphabetical order.
+  So the answer to the above example would be <b>'abbcca'</b> (without quotation marks). Below is a slightly longer example (with the
+  result <b>'adbacfdbecfe'</b>):
+</p>
+
+<pre>
+  <code>
+    c e
+    d c
+    c a
+    d e
+    b c
+    f b
+    d b
+    b e
+    a e
+    e e
+    b b
+    c c
+    b f
+    c b
+    c f
+    a d
+    e b
+    a d
+  </code>
+</pre>
+
+<p>
+  Using the fight from the input file, and assuming that <b>{{militia_player}}</b> is a rational player, what is the resulting answer?
+</p>
